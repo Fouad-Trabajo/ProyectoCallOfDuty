@@ -4,15 +4,15 @@ public class Equipamiento {
 	
 	
 	//Constante
-	private static final int ID_AUTOGENERADO=0;
+	private static int ID_AUTOGENERADO=0;
 	
 	//Atributos
 	private int id;
 	private int espacioEnMochila;
 	
 	//Constructor
-	public Equipamiento(int id, int espacioEnMochila) {
-		this.id = id;
+	public Equipamiento(int espacioEnMochila) {
+		this.id = ID_AUTOGENERADO++;
 		this.espacioEnMochila = espacioEnMochila;
 	}
 
@@ -33,9 +33,7 @@ public class Equipamiento {
 		this.espacioEnMochila = espacioEnMochila;
 	}
 
-	public static int getIdAutogenerado() {
-		return ID_AUTOGENERADO;
-	}
+	//La constante no necesita getter y setter
 	
 	
 	

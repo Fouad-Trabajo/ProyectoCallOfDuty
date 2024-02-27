@@ -1,17 +1,16 @@
 package proyecto.clases;
 
+import java.util.Arrays;
+
 public class Usuario {
-	
+
 	// Atributos
 	private String nombre;
 	private int espacioMochila;
 	private Arma armaPrincipal;
 	private Arma armaSecundaria;
 	private Accesorio[] accesorios = new Accesorio[3]; // Solo puede tener equipado hasta 3 accesorios
-	//Debería hacerlo con <arrayList>??? No lo se jajaja 😅😅
-	
-	
-	
+
 	// Constructor
 	public Usuario(String nombre, int espacioMochila, Arma armaPrincipal, Arma armaSecundaria, Accesorio[] accesorios) {
 		this.nombre = nombre;
@@ -38,28 +37,36 @@ public class Usuario {
 		this.espacioMochila = espacioMochila;
 	}
 
-	public Arma getArmaPrincipal() {
-		return armaPrincipal;
+	public boolean getArmaPrincipal() {
+		return false;
 	}
 
 	public void setArmaPrincipal(Arma armaPrincipal) {
 		this.armaPrincipal = armaPrincipal;
 	}
 
-	public Arma getArmaSecundaria() {
-		return armaSecundaria;
+	public boolean getArmaSecundaria() {
+		return false;
 	}
 
 	public void setArmaSecundaria(Arma armaSecundaria) {
 		this.armaSecundaria = armaSecundaria;
 	}
 
-	public Accesorio[] getAccesorios() {
-		return accesorios;
+	public boolean getAccesorios() {
+		return false;
 	}
 
 	public void setAccesorios(Accesorio[] accesorios) {
 		this.accesorios = accesorios;
+	}
+
+	@Override
+	public String toString() {
+		return "Usuario--> [nombre=" + nombre + ", espacio de la mochila = " + espacioMochila + "]"
+				+ "\nArmaPrincipal--> [" + armaPrincipal + "], "
+				+ "\nArmaSecundaria--> [" + armaSecundaria + "], "
+				+ "\nAccesorios--> " + Arrays.toString(accesorios);
 	}
 
 }

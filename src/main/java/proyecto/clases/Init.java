@@ -6,7 +6,12 @@ public class Init {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		InventarioController inventarioController = new InventarioController(null, null, null);
+		//Instancia de inventarioController
+		ArmaPrincipal[] armasPrincipales= {InventarioController.armaPricipal1};
+		ArmaSecundaria[] armasSecundarias= {InventarioController.armaSecundaria1};
+		Accesorio[] accesorios= {InventarioController.accesorio1,InventarioController.accesorio2,InventarioController.accesorio3};
+		
+		InventarioController inventarioController = new InventarioController(armasPrincipales, armasSecundarias,accesorios);
 
 		System.out.println("-------MENU--------");
 		System.out.println("1-Mostrar inventario");
@@ -28,6 +33,7 @@ public class Init {
 		case 2:
 			System.out.println("Añadiendo armas...");
 			InventarioController.addArma(null);
+
 			break;
 
 		case 3:

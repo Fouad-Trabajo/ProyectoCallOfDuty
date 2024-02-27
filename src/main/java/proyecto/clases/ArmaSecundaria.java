@@ -1,17 +1,17 @@
 package proyecto.clases;
 
-public class ArmaSecundaria extends Arma{
-	
-	//Atributos
+public class ArmaSecundaria extends Arma {
+
+	// Atributos
 	private int daño;
 
-	//Constructor
-	public ArmaSecundaria(int id, int espacioEnMochila, String tipoArma, int municion, int daño) {
-		super(id, espacioEnMochila, tipoArma, municion);
+	// Constructor
+	public ArmaSecundaria(int espacioEnMochila, String tipoArma, int municion, int daño) {
+		super(espacioEnMochila, tipoArma, municion);
 		this.daño = daño;
 	}
-	
-	//Getter y setter
+
+	// Getter y setter
 	public int getDaño() {
 		return daño;
 	}
@@ -19,8 +19,11 @@ public class ArmaSecundaria extends Arma{
 	public void setDaño(int daño) {
 		this.daño = daño;
 	}
-	
-	
 
-	
+	@Override
+	public String toString() {
+		return "id: " + getId() + ", espacio en mochila: " + getEspacioEnMochila() + ", tipo de arma: " + getTipoArma()
+				+ ", munición: " + getMunicion() + ", daño: " + getDaño();
+	}
+
 }

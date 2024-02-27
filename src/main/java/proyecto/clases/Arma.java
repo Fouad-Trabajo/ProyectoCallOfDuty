@@ -8,8 +8,8 @@ public class Arma extends Equipamiento{
 	
 	
 	//Constructor
-	public Arma(int id, int espacioEnMochila, String tipoArma, int municion) {
-		super(id, espacioEnMochila);
+	public Arma(int espacioEnMochila, String tipoArma, int municion) {
+		super(espacioEnMochila);
 		this.tipoArma = tipoArma;
 		this.municion = municion;
 	}
@@ -27,12 +27,12 @@ public class Arma extends Equipamiento{
 	}
 
 
-	public int getNumValas() {
+	public int getMunicion() {
 		return municion;
 	}
 
 
-	public void setNumValas(int muncicion) {
+	public void setMunicion(int muncicion) {
 		this.municion = muncicion;
 	}
 	

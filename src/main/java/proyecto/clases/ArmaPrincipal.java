@@ -7,9 +7,9 @@ public class ArmaPrincipal extends Arma {
 	private int alcance; // Se entiende que el alcanse es en metros
 
 	// Constructor
-	public ArmaPrincipal(int id, int espacioEnMochila, String tipoArma, int municion, String velocidadRecarga,
+	public ArmaPrincipal(int espacioEnMochila, String tipoArma, int municion, String velocidadRecarga,
 			int alcance) {
-		super(id, espacioEnMochila, tipoArma, municion);
+		super(espacioEnMochila, tipoArma, municion);
 		this.velocidadRecarga = velocidadRecarga;
 		this.alcance = alcance;
 	}
@@ -29,6 +29,13 @@ public class ArmaPrincipal extends Arma {
 
 	public void setAlcance(int alcance) {
 		this.alcance = alcance;
+	}
+
+	@Override
+	public String toString() {
+		return "id: " + getId() + ", espacio en mochila: " + getEspacioEnMochila() + ", tipo de arma: " + getTipoArma()
+				+ ", munición: " + getMunicion() + ", velocidad de recarga: " + velocidadRecarga + ", alcance:"
+				+ alcance;
 	}
 
 }
